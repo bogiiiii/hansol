@@ -1,0 +1,247 @@
+@charset "utf-8";
+
+/*전체 안보임*/
+.pane, .mcon03Menu04, .mMainCon04{display: none;}
+
+@media screen and (max-width:768px){ /*최대값*/
+    
+    /*모바일세팅*/
+    body{min-width: auto;} /*최소값*/
+    .inner{
+        width: auto;
+        margin: 0;
+    }
+    
+    /*모바일뷰에서 안보임*/
+    .gnb, .util, .mainCon02, .con03Menu04, .mainCon04, .fLogo, .fInfo{display: none;}
+    
+    /*모바일뷰에서 보임*/
+    .panel, .mcon03Menu04, .mMainCon04{display: block;}
+    
+    
+    /*이미지 사이즈 변경*/
+    #header h1, .panel, .sliderBtn, .con01List li span{
+        background-size: 400px !important; /*백그라운드 사이즈를 400px로 유지*/
+    }
+    
+    
+    /*header*/
+    #header{
+        height: auto;
+        margin: 10px 20px;
+    }
+    #header h1{
+        width: 70px;
+        height: 28px;
+        background-position: 0 0;
+        position: static;
+    }
+    .panel{
+        width: 16px;
+        height: 16px;
+        background: url(../images/sp_com.png) -227px -97px;
+        text-indent: -9999px;
+        position: absolute;
+        right: 0;
+        top: 6px;
+    }
+    .panel a{
+        display: block;
+        height: 100%;
+    }
+    
+    
+    /*mainSlider*/
+    .mainSlider{
+        margin: 0;
+        height: auto;
+        padding: 45% 0;
+    }
+    .sliderTxt{padding-top: 0;}
+    .sliderTxt h2{
+        font-size: 14px;
+        font-family: 'NotoSans',sans-serif;
+        font-weight: bold;
+    }
+    .sliderTxt p{font-size: 11px;}
+    .sliderBtn{
+        width: 13px;
+        height: 23px;
+        background-position: -64px -30px;
+        margin-top: -12px;
+    }
+    .prevBtn{left: 10px;}
+    .nextBtn{
+        background-position: -79px -30px;
+        right: 10px;
+    }
+    
+    
+    /*mainCon01*/
+    .mainCon01{padding: 20px 0;}
+    .con01List{
+        display: block;
+        overflow: hidden;
+    }
+    .con01List li{
+        width: 33.33%;
+        margin: 0;
+        padding: 10px 0;
+    }
+    .con01List li span{
+        width: 33px;
+        height: 33px;
+        margin: 0 auto;
+    }
+    .con01List li a p{margin-top: 0;}
+    
+    .con01Icon01{background-position: -1px -57px;}
+    .con01Icon02{background-position: -37px -57px;}
+    .con01Icon03{background-position: -74px -55px;}
+    .con01Icon04{background-position: -109px -57px;}
+    .con01Icon05{background-position: -145px -57px;}
+    .con01Icon06{background-position: -181px -57px;}
+    
+    /*con01List 호버 없애기*/
+    .con01List li:hover span, .con01List li:hover .con01Icon01, .con01List li:hover .con01Icon02{
+        background-position-y: -57px;
+    }
+    .con01List li:hover .con01Icon03{background-position-y: -55px;}
+
+    .con01List li:hover p{
+        color: #333;
+        font-weight: normal;
+    }
+    
+    
+    /*mainCon03*/
+    .mainCon03{padding: 0 10px;}
+    .con03Menu{
+        width: calc(50% - 5px); /*사이여백주기 위해서 이미지에서 -5px씩 빼주기*/
+        height: auto;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    .con03Menu:nth-child(2n){
+        margin-right: 0;
+    }
+    .con03Menu::after{
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+    .con03Menu a{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .con03Menu h3{
+        padding-top: 0;
+        position: absolute;
+        width: 100%; /*가로중간정렬*/
+        top: 50%;
+        transform: translate(0,-50%); /*가변일때 세로중간정렬*/
+        font-size: 15px;
+    }
+    
+    /*.con03Menu 호버 없애기*/
+    .con03Menu a:hover p{display: none;}
+    .con03Menu a:hover{background: none;}
+    .con03Menu02:hover a{color: #333;}
+    .mcon03Menu04{
+        padding: 0;
+        background: none;
+        background: url(../images/mainrow3_img1.jpg) no-repeat;
+        background-size: 100%;
+        margin-right: 0;
+    }
+    .mcon03Menu04 h3{
+        margin-bottom: 0;
+        color: #fff;
+    }
+    
+    
+    /*mMainCon04*/
+    .mMainCon04 dl{
+        background: #f2f0ed;
+        height: 45px;
+        line-height: 45px;
+        font-size: 14px;
+        margin: 0 10px 10px 10px;
+    }
+    .mMainCon04 dt{
+        display: inline-block;
+        width: 20%; /*가로값을 줘야 인라인일때 한줄로 정렬가능*/
+        margin-right: 10px;
+        text-align: center;
+        vertical-align: middle;
+        font-weight: 600;
+        color: #2d5b79;
+    }
+    .mMainCon04 dd{
+        display: inline-block;
+        width: 65%; /*가로값을 줘야 인라인일때 한줄로 정렬가능*/
+        vertical-align: middle;
+    }
+    .mMainCon04 dd a{
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    
+    
+    /*mainCon05*/
+    .mainCon05{
+        padding: 20px 10px 10px 10px;
+        margin-top: 0;
+    }
+    .con05Menu{padding: 0 10px;}
+    .con05Menu li{
+        width: calc(50% - 5px);
+        height: auto;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        background-size: 100% 100%; /*가로값 세로값*//*비율에 상관없이 가로와 세로값이 100%로 딱맞게 보임*/
+    }
+    .con05Menu li:nth-child(2n){margin-right: 0;}
+
+    .con05Menu li h3{
+        padding: 60% 0 10% 0;
+        font-size: 15px;
+    }
+    .con05Menu li p{display: none;}
+    
+    
+    /*footer*/
+    #footer{text-align: center;}
+    .fMenu{width: 100%;}
+    .fMenu li{
+        float: none; /*float속성은 중간정렬이 안되므로 float 해제 후, 각자 inline-block을 주고 부모값에 text-align: center*/
+        display: inline-block;
+    }
+    .fMenu li:first-child::before{display: none;}
+    
+    .csFamily{width: 100%;}
+    .csFamily>div{
+        box-sizing: border-box;
+        float: none;
+        display: inline-block;
+    }
+    .csBox{width: 50%;}
+    .csBox .num {font-size: 13px;}
+    .familyBox {
+        width: 30%;
+        text-align: left;
+        font-size: 11px;
+    }
+    
+    .fBottom{padding: 30px 0;}
+
+} 
+/*아이폰5등 작은화면*/
+@media screen and (max-width:320px){
+    #footer{letter-spacing: -1px;}
+}
